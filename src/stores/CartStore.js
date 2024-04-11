@@ -25,6 +25,9 @@ export const useCartStore = defineStore("CartStore", {
       state.items.reduce((total, item) => total + item.price, 0),
   },
   actions: {
+    clear() {
+      this.items = [];
+    },
     checkout() {
       const AuthUserStore = useAuthUserStore();
       alert(

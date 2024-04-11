@@ -14,6 +14,7 @@ import { createPinia } from "pinia";
 import resetStore from "./plugins/ResetStore";
 const pinia = createPinia();
 pinia.use(resetStore);
+pinia.use(PiniaHistoryPlugin);
 
 // Init App
 createApp(App)
