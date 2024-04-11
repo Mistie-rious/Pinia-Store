@@ -31,7 +31,7 @@ export const useCartStore = defineStore("CartStore", {
     checkout() {
       const AuthUserStore = useAuthUserStore();
       alert(
-        `${AuthUserStore.username} just bought ${this.count} items at a total of $${this.total}`
+        `$You just bought ${this.count} items at a total of $${this.total}.`
       );
     },
     addItems(count, item) {
